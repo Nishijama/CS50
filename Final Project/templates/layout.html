@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content="initial-scale=1, width=device-width">
+        <!--import Google Charts API-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--import stylesheet-->
+        <link href='/static/styles/styles.css' rel="stylesheet">
+        {%block head%}{%endblock%}
+
+    </head>
+    <body>
+    <nav>
+        <ul>
+            <li><a id='main_page' href="/?month={{month}}">Main Page</a></li>
+            <li><a id='landscape' href="/landscape?month={{month}}">Landscape</a></li>
+            <!--<li><a class="navButtons" id="reqButton" href="#">Requests</a></li>-->
+            <!--<li><a class="navButtons" id="pagesButton" href="#">Pages</a></li>-->
+            <div id='date_menu'>
+                <form action='#' method='get'>
+                    <select name='month' title='month' style="height:35px; width:30vw; font-size:16px; text-align:center;" onchange='this.form.submit();'>
+                        <option value='01'{% if month=='01' %} selected {% endif %}>January</option>
+                        <option value='02'{% if month=='02' %} selected {% endif %}>February</option>
+                        <option value='03'{% if month=='03' %} selected {% endif %}>March</option>
+                        <option value='04'{% if month=='04' %} selected {% endif %}>April</option>
+                        <option value='05'{% if month=='05' %} selected {% endif %}>May</option>
+                        <option value='06'{% if month=='06' %} selected {% endif %}>June</option>
+                        <option value='07'{% if month=='07' %} selected {% endif %}>July</option>
+                        <option value='08'{% if month=='08' %} selected {% endif %}>August</option>
+                        <option value='09'{% if month=='09' %} selected {% endif %}>September</option>
+                        <option value='10'{% if month=='10' %} selected {% endif %}>October</option>
+                        <option value='11'{% if month=='11' %} selected {% endif %}>November</option>
+                        <option value='12'{% if month=='12' %} selected {% endif %}>December</option>
+                    </select>
+                    <!--<input id="submitButton" type="submit" value="Go" style="height:30px;width:40px;">-->
+                </form>
+            </div>
+            <a id="icon" href="/login"><i class="material-icons" href="/login" style="font-size:24px;color:white;padding:8px;">logout</i></a>
+        </ul>
+    </nav>
+
+            <script>
+            function myFunction(x) {
+              if (x.matches) { // If media query matches
+                document.getElementById("main_page").className = 'material-icons';
+                document.getElementById("main_page").style = "font-size:24px;color:white;padding:8px;";
+                document.getElementById("main_page").innerHTML = 'home';
+                document.getElementById("landscape").className = 'material-icons';
+                document.getElementById("landscape").style = "font-size:24px;color:white;padding:8px;";
+                document.getElementById("landscape").innerHTML = 'terrain';
+              } else {
+               document.getElementById("main_page").innerHTML = "Main Page";
+               document.getElementById("landscape").innerHTML = "Landscape";
+               document.getElementById("main_page").className = "";
+               document.getElementById("landscape").className = "";
+               document.getElementById("main_page").style = "display: block;color: white;text-align: center; font-family:sans-serif; font-size:16px; margin: 0px;padding: 14px 16px;text-decoration: none;";
+               document.getElementById("landscape").style = "display: block;color: white;text-align: center; font-family:sans-serif; font-size:16px; margin: 0px;padding: 14px 16px;text-decoration: none;";
+              }
+            }
+
+            var x = window.matchMedia("(max-width: 800px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction) // Attach listener function on state changes
+            </script>
+            {%block body%}{%endblock%}
+    </body>
+</html>

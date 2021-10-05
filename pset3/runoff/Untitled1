@@ -1,0 +1,19 @@
+void eliminate(int min)
+{
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (copied_candidates[i].eliminated == false && copied_candidates[i].votes == min)
+        {
+            for (int y = 0; y < candidate_count; y++)
+            {
+                if (strcmp(copied_candidates[i].name, candidates[y].name) == 0)
+                {
+                    //copied_candidates[i].eliminated = true;
+                    candidates[y].eliminated = true;
+                    printf("eliminated: %s\n", candidates[y].name);
+                }
+            }
+        }
+    }
+    return;
+}

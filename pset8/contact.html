@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oregano&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="contact.css">
+        <script>
+            function error()
+            {
+                alert('Sorry, this feature is not yet implemented. Check back soon! ;)')
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navbar">
+              <a href="index.html">Home</a>
+              <a href="aboutMe.html">About me</a>
+              <div class="subnav">
+                <button class="subnavbtn">Galery <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                  <a href="blocks">Wooden blocks</a>
+                  <a href="pots">Flower pots</a>
+                  <a href="christmas">Christmas</a>
+                  <a href="others">Others</a>
+                </div>
+              </div>
+              <a href="contact.html">Contact</a>
+        </div>
+        <section class="contact">
+            <div class="content">
+                <h1>Contact me :)</h1>
+                <p>If you'd like to ask questions or place an order please feel free to drop me an email!</p>
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>Bogus address<br>Further bogus<br>666</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>123-456-789</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>aniasadventures@bogusmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            <div class="contactForm">
+                <form onsubmit="error(); return true;">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div>
+                        <input class="submitbutton" type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+            </div>
+        </section>
+    </body>
+</html>

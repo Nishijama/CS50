@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Ania's Adventures ABOUT
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Oregano&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+        /* I learnt techniques used below from https://www.youtube.com/watch?v=gggB0Nq5vBk&ab_channel=OnlineTutorials */
+          body
+          {
+               font-family: 'Arial', sans-serif;
+          }
+          .container1 {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+          }
+          .container1 div {
+            /*border: #ccc solid;*/
+            padding:10px;
+          }
+          .box1 {
+            flex: 1;
+
+          }
+          .box2 {
+            flex: 2;
+          }
+          @media (max-width: 991px)
+          {
+              .contact {
+                  padding: 50px;
+              }
+              .container1 {
+                  flex-direction: column;
+              }
+              .box1 {
+                  margin-bottom: 40px;
+              }
+              .box2 {
+                  width: 100%;
+              }
+          }
+        </style>
+    </head>
+    <body style="background-color: #f3e6ff; text-align: center;">
+        <div class="navbar">
+              <a href="index.html">Home</a>
+              <a href="aboutMe.html">About me</a>
+              <div class="subnav">
+                <button class="subnavbtn">Galery <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                  <a href="blocks">Wooden blocks</a>
+                  <a href="pots">Flower pots</a>
+                  <a href="christmas">Christmas</a>
+                  <a href="others">Others</a>
+                </div>
+              </div>
+              <a href="contact.html">Contact</a>
+        </div>
+
+        <h1 class="header">About Me</h1>
+
+        <div class="container1">
+          <div class="box1">
+              <img style="border-radius: 50%; height: 300px" src='Ania1.jpg' class="img-circle" >
+              <p></p>
+              <p style="font-size:18px;"> Hello My name is Ania, and I am an asipirng Decoupage Master</p>
+          </div>
+
+          <div class="box2">
+              <p style="font-size:24px; text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
+              eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat,
+              purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
+              tortor sed accumsan convallis.</p>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h1>Your portfolio:</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Loop through the database entries to display them in this table -->
+            {% for row in rows %}
+            <tr>
+                <td> {{ row["symbol"] }} </td>
+                <td> {{ row["name"] }} </td>
+                <td> {{ row["shares"] }} </td>
+                <td> {{ row["currentPrice"]|usd }} </td>
+                <td> {{ row["total"]|usd }} </td>
+            </tr>
+            {% endfor %}
+            {% for row in rows2 %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> {{ row["cash"]|usd }} </td>
+            </tr>
+            {% endfor %}
+            {% for row in rows3 %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="font-weight: bold;">{{ row["GRANDtotal"]|usd }}</td>
+            </tr>
+            {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
